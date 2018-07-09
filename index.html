@@ -233,6 +233,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/09/datatable使用记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="forecloud">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://img.hb.aicdn.com/48ffe5c6428e89286d7c951c272e47e14bc35c5939b132-TIGp6T_fw658">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Forecloud">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/09/datatable使用记录/" itemprop="url">datatable使用记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T10:08:35+08:00">
+                2018-07-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-报错-Invalid-JSON-response"><a href="#1-报错-Invalid-JSON-response" class="headerlink" title="1.报错:Invalid JSON response"></a>1.报错:Invalid JSON response</h2><h6 id="完整报错"><a href="#完整报错" class="headerlink" title="完整报错:"></a>完整报错:</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataTables warning: table id=datatable2 - Invalid <span class="built_in">JSON</span> response. For more information about <span class="keyword">this</span> error, please see http:<span class="comment">//datatables.net/tn/1</span></span><br></pre></td></tr></table></figure>
+<h6 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程:"></a>解决过程:</h6><p>1.google发现了<a href="https://datatables.net/manual/tech-notes/1" target="_blank" rel="noopener">datable报错文档</a> 当然,英文的,Google翻译一波后发现并没有什么卵用,但是它提醒我应该多看看控制台</p>
+<p>2.查看浏览器控制台,看是否报错,响应是否正常</p>
+<p>3.查看后台日志信息,看是否报错</p>
+<h6 id="结果"><a href="#结果" class="headerlink" title="结果:"></a>结果:</h6><p>原来是我后期修改代码时,新增了字段,但是没有将字段新增到正式系统库,代码更新后,就出现了这个报错,但由于正式服务器我没有操作权限,所以无法查看后台报错,于是查看浏览器,发现datatable发出的两条ajax请求都是响应500,明显是后台发生了报错,所以就去找大佬查看服务器日志了,才发现少了个字段…….尴尬</p>
+<p>######反思:</p>
+<p>我有个不好的开发习惯,发现报错之后总喜欢马上就去google,完全没有正常的排错思路,寻找可能的原因,这样的第一反应很糟糕,要改.另外,表字段变更及时同步其他数据库,减少那些低级错误造成的困扰.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/09/随笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -304,7 +430,7 @@
       
         
           
-            <p>1.早上可能是糟糕心情的高峰期,不要纠结于小事情,起床气就是小事情,不管是别人的还是自己的,控制自己的起床气,别让它伤人.</p>
+            <p>1.早上可能是糟糕心情的高发期,不要纠结于小事情,起床气就是小事情,不管是别人的还是自己的,控制自己的起床气,别让它伤人.</p>
 
           
         
@@ -390,7 +516,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -398,6 +524,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
