@@ -29,15 +29,17 @@ tags: [hexo,github pages,appveyor]
 
 完成登录后找到[new project](https://ci.appveyor.com/projects/new)按钮,选择github,然后在右侧的列表中选择你的博客仓库,比如我的是:[forecloud.github.io](https://github.com/forecloud/forecloud.github.io)点击后面的add即可.再回到Project页就可以看到你的项目了,项目名右侧找到设置按钮,进入设置页面
 
-<img src="/hexo-appveyor-博客持续集成/20180710170446.png" width="800px" />
+{% asset_img slug 20180710175622.png General %}
 
-<img src="/hexo-appveyor-博客持续集成/20180710171055.png" width="800px" />
+{% asset_img slug 20180710170446.png General %}
+
+{% asset_img slug 20180710171055.png General %}
 
 settings部分需要配置的有两块General,Environment
 
 我的仓库设置了两个分支,master和source;master存放生成在public文件夹的静态文件;source存放博客源码.General中设置Default branch,Branches to build两项;都设置成源码分支source
 
-<img src="/hexo-appveyor-博客持续集成/20180710174527.png" width="800px" />
+{% asset_img slug 20180710174527.png General %}
 
 settings部分需要配置的是四个变量:
 
@@ -51,7 +53,7 @@ TARGET_BRANCH:默认是master
 
 (前两个是appveyor自动部署时,将部署文件提交到master分支时要用到,后两个是告诉appveyor你的部署仓库的地址)
 
-<img src="/hexo-appveyor-博客持续集成/20180710175622.png" width="800px" />
+{% asset_img slug 20180710175622.png Environment %}
 
 ##### 第二步:
 
