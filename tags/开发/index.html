@@ -83,7 +83,7 @@
 <meta name="keywords" content="关键词">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Forecloud">
-<meta property="og:url" content="http://yoursite.com/tags/开发/index.html">
+<meta property="og:url" content="https://forecloud.github.io/tags/开发/index.html">
 <meta property="og:site_name" content="Forecloud">
 <meta property="og:description" content="从前一直在慷他人之慨,希望借博客之手牵引我有所改变">
 <meta property="og:locale" content="zh-Hans">
@@ -108,18 +108,18 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: 'O2PR39TQB2',
+      apiKey: '0593858000fe14de57f930e08020eec1',
+      indexName: 'prod_index_forecloud',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"亲,输入关键字搜索","hits_empty":"没有找到与${query}相关的内容","hits_stats":"${hits} 条相关记录,耗时: ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/开发/"/>
+  <link rel="canonical" href="https://forecloud.github.io/tags/开发/"/>
 
 
 
@@ -231,9 +231,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -576,6 +614,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 

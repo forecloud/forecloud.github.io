@@ -83,11 +83,11 @@
 <meta name="keywords" content="开发,js,datatable">
 <meta property="og:type" content="article">
 <meta property="og:title" content="datatable使用记录">
-<meta property="og:url" content="http://yoursite.com/2018/07/09/datatable使用记录/index.html">
+<meta property="og:url" content="https://forecloud.github.io/2018/07/09/datatable使用记录/index.html">
 <meta property="og:site_name" content="Forecloud">
 <meta property="og:description" content="1.报错:Invalid JSON response完整报错:1DataTables warning: table id=datatable2 - Invalid JSON response. For more information about this error, please see http://datatables.net/tn/1 解决过程:1.google发现了datable报错文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-09T06:25:36.708Z">
+<meta property="og:updated_time" content="2018-07-09T13:02:35.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="datatable使用记录">
 <meta name="twitter:description" content="1.报错:Invalid JSON response完整报错:1DataTables warning: table id=datatable2 - Invalid JSON response. For more information about this error, please see http://datatables.net/tn/1 解决过程:1.google发现了datable报错文">
@@ -109,18 +109,18 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: 'O2PR39TQB2',
+      apiKey: '0593858000fe14de57f930e08020eec1',
+      indexName: 'prod_index_forecloud',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"亲,输入关键字搜索","hits_empty":"没有找到与${query}相关的内容","hits_stats":"${hits} 条相关记录,耗时: ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/09/datatable使用记录/"/>
+  <link rel="canonical" href="https://forecloud.github.io/2018/07/09/datatable使用记录/"/>
 
 
 
@@ -232,9 +232,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -263,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/09/datatable使用记录/">
+    <link itemprop="mainEntityOfPage" href="https://forecloud.github.io/2018/07/09/datatable使用记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fore">
@@ -756,7 +794,7 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/07/09/datatable使用记录/';
+          this.page.url = 'https://forecloud.github.io/2018/07/09/datatable使用记录/';
           this.page.identifier = '2018/07/09/datatable使用记录/';
           this.page.title = 'datatable使用记录';
         };
@@ -796,6 +834,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
