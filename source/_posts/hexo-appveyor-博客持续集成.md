@@ -27,13 +27,11 @@ tags: [hexo,github pages,appveyor]
 
 推荐使用github账号直接登入,操作起来会很方便.
 
-完成登录后找到[new project](https://ci.appveyor.com/projects/new)按钮,选择github,然后在右侧的列表中选择你的博客仓库,比如我的是:[forecloud.github.io](https://github.com/forecloud/forecloud.github.io)点击后面的add即可.再回到Project页就可以看到你的项目了,项目名右侧找到设置按钮,进入设置页面
+完成登录后找到[new project](https://ci.appveyor.com/projects/new)按钮,选择github,然后在右侧的列表中选择你的博客仓库,比如我的是:[forecloud.github.io](https://github.com/forecloud/forecloud.github.io)点击后面的add即可.再回到Project页就可以看到你的项目了,接着在项目名右侧找到设置按钮,进入设置页面
 
-{% asset_img slug 20180710175622.png General %}
+{% asset_img slug 20180710170446.png NEW PROJECT %}
 
-{% asset_img slug 20180710170446.png General %}
-
-{% asset_img slug 20180710171055.png General %}
+{% asset_img slug 20180710171055.png Select repository %}
 
 settings部分需要配置的有两块General,Environment
 
@@ -47,17 +45,27 @@ GIT_USER_EMAIL:邮箱
 
 GIT_USER_NAME:用户名
 
-STATIC_SITE_REPO:Content Repo地址
+STATIC_SITE_REPO:生成的public文件要提交到的github地址[填写github pages仓库地址即可][比如我的是:https://github.com/forecloud/forecloud.github.io.git(点击仓库的Use HTTPS再copy地址)]
 
 TARGET_BRANCH:默认是master
 
-(前两个是appveyor自动部署时,将部署文件提交到master分支时要用到,后两个是告诉appveyor你的部署仓库的地址)
+(前两个是appveyor自动部署时,将appveyor编译后的文件提交到master分支时要用到,后两个是告诉appveyor你的部署仓库的地址)
 
 {% asset_img slug 20180710175622.png Environment %}
 
-##### 第二步:
+##### 第二步:配置access_token
 
-##### 第三步:
+回到你自己的github,点击你头像右侧的下拉按钮,选择[Settings](https://github.com/settings/profile),依次点击[Developer settings](https://github.com/settings/developers) >> [Personal access tokens](https://github.com/settings/tokens) >> [Generate new token](https://github.com/settings/tokens/new)  >> 输入**Token description** >> **Select scopes** 部分只选中 ***repo*** ,创建完成后会跳转到[tokens页面](https://github.com/settings/tokens),复制那串字符串 >> 将复制的字符串到appvoyor[加密](https://ci.appveyor.com/tools/encrypt) >> 复制加密后的tokens
+
+{% asset_img slug 20180712115148.png Generate new token %}
+
+{% asset_img slug 20180712115518.png 复制tokens %}
+
+{% asset_img slug 20180712115956.png 复制加密后tokens %}
+
+##### 第三步:设置appveyor.yml
+
+可以直接复制我的配置:[appveyor.yml](https://github.com/forecloud/forecloud.github.io/blob/source/appveyor.yml) 把token改成你刚刚复制的加密后的token就可以了
 
 ##### 操作过程中遇到的其他问题
 
@@ -72,3 +80,24 @@ TARGET_BRANCH:默认是master
 [appveyor官方文档](https://www.appveyor.com/docs/build-configuration/#configuring-build){建议英文靠谱的同学直接阅读}
 
 [使用AppVeyor持续集成本博客](https://liluoao.github.io/2018/use-appveyor-ci.html){参考了appveyor.yml文件的最后几行配置git commit开始}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
