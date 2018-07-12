@@ -67,11 +67,27 @@ TARGET_BRANCH:默认是master
 
 可以直接复制我的配置:[appveyor.yml](https://github.com/forecloud/forecloud.github.io/blob/source/appveyor.yml) 把token改成你刚刚复制的加密后的token就可以了
 
+##### 第四部：检验CI配置是否起作用
+
+检出你的源码分支
+
+进入到项目根目录，git bash执行命令:npm install hexo-cli --save,为项目安装完成hexo.
+
+修改一个笔记文件并保存
+
+回到git bash 依次执行{git add -A .} {git commit -am 'test'} {git push origin 源码分支名}
+
+再到appveyor首页,点击project,稍等一会,项目会出现console,并输出日志,如果没看到点击项目或者刷新就有了.当你看到Building success就说明构建成功了.但是为了确保万无一失,你应该查看github中master分支中的文章是不是已经变成了你修改后的,源码分支是不是修改后的,如果都是正常的,那么,恭喜你,CI的简单实战就算完成了.
+
+{% asset_img slug 20180712121330.png appveyor控制台 %}
+
+{% asset_img slug 20180712121531.png 构建成功 %}
+
 ##### 操作过程中遇到的其他问题
 
 1.git分支创建,分支切换
 
-2.
+2.待续
 
 参考引用:
 
