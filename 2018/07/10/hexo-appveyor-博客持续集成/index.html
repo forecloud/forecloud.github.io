@@ -94,7 +94,9 @@
 <meta property="og:image" content="https://forecloud.github.io/2018/07/10/hexo-appveyor-博客持续集成/20180712115148.png">
 <meta property="og:image" content="https://forecloud.github.io/2018/07/10/hexo-appveyor-博客持续集成/20180712115518.png">
 <meta property="og:image" content="https://forecloud.github.io/2018/07/10/hexo-appveyor-博客持续集成/20180712115956.png">
-<meta property="og:updated_time" content="2018-07-12T04:06:55.505Z">
+<meta property="og:image" content="https://forecloud.github.io/2018/07/10/hexo-appveyor-博客持续集成/20180712121330.png">
+<meta property="og:image" content="https://forecloud.github.io/2018/07/10/hexo-appveyor-博客持续集成/20180712121531.png">
+<meta property="og:updated_time" content="2018-07-12T04:21:12.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+appveyor 博客持续集成">
 <meta name="twitter:description" content="很早之前就听说过持续集成这个概念,但是一直没有实际操作过,这两天在搭建hexo博客时,幸运地让我再次遇见了它.并且发觉,这次搭建博客就是一个不错的入门机会.最终,在花费了两天的时间之后,终于把脉络打通了. 操作基础:基于hexo,github pages完成博客搭建主要参考了Google到的文章,本文主题是持续集成,所以不做搭建过程描述. 持续集成的思想在实现建站的过程中,除了代码的编写,还有实施">
@@ -431,8 +433,15 @@
 <img src="/2018/07/10/hexo-appveyor-博客持续集成/20180712115518.png" class="slug" title="复制tokens">
 <img src="/2018/07/10/hexo-appveyor-博客持续集成/20180712115956.png" class="slug" title="复制加密后tokens">
 <h5 id="第三步-设置appveyor-yml"><a href="#第三步-设置appveyor-yml" class="headerlink" title="第三步:设置appveyor.yml"></a>第三步:设置appveyor.yml</h5><p>可以直接复制我的配置:<a href="https://github.com/forecloud/forecloud.github.io/blob/source/appveyor.yml" target="_blank" rel="noopener">appveyor.yml</a> 把token改成你刚刚复制的加密后的token就可以了</p>
+<h5 id="第四部：检验CI配置是否起作用"><a href="#第四部：检验CI配置是否起作用" class="headerlink" title="第四部：检验CI配置是否起作用"></a>第四部：检验CI配置是否起作用</h5><p>检出你的源码分支</p>
+<p>进入到项目根目录，git bash执行命令:npm install hexo-cli –save,为项目安装完成hexo.</p>
+<p>修改一个笔记文件并保存</p>
+<p>回到git bash 依次执行{git add -A .} {git commit -am ‘test’} {git push origin 源码分支名}</p>
+<p>再到appveyor首页,点击project,稍等一会,项目会出现console,并输出日志,如果没看到点击项目或者刷新就有了.当你看到Building success就说明构建成功了.但是为了确保万无一失,你应该查看github中master分支中的文章是不是已经变成了你修改后的,源码分支是不是修改后的,如果都是正常的,那么,恭喜你,CI的简单实战就算完成了.</p>
+<img src="/2018/07/10/hexo-appveyor-博客持续集成/20180712121330.png" class="slug" title="appveyor控制台">
+<img src="/2018/07/10/hexo-appveyor-博客持续集成/20180712121531.png" class="slug" title="构建成功">
 <h5 id="操作过程中遇到的其他问题"><a href="#操作过程中遇到的其他问题" class="headerlink" title="操作过程中遇到的其他问题"></a>操作过程中遇到的其他问题</h5><p>1.git分支创建,分支切换</p>
-<p>2.</p>
+<p>2.待续</p>
 <p>参考引用:</p>
 <p><a href="http://feg.netease.com/archives/634.html" target="_blank" rel="noopener">如何更好地对hexo博客管理</a>{提供了整体思路}</p>
 <p><a href="https://www.appveyor.com/docs/build-configuration/#configuring-build" target="_blank" rel="noopener">appveyor官方文档</a>{建议英文靠谱的同学直接阅读}</p>
@@ -654,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#操作基础-基于hexo-github-pages完成博客搭建"><span class="nav-number">1.</span> <span class="nav-text">操作基础:基于hexo,github pages完成博客搭建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#持续集成的思想"><span class="nav-number">2.</span> <span class="nav-text">持续集成的思想</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第一步-到-appveyor-配置需要实现持续集成的项目"><span class="nav-number">3.</span> <span class="nav-text">第一步:到 appveyor 配置需要实现持续集成的项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二步-配置access-token"><span class="nav-number">4.</span> <span class="nav-text">第二步:配置access_token</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三步-设置appveyor-yml"><span class="nav-number">5.</span> <span class="nav-text">第三步:设置appveyor.yml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#操作过程中遇到的其他问题"><span class="nav-number">6.</span> <span class="nav-text">操作过程中遇到的其他问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#操作基础-基于hexo-github-pages完成博客搭建"><span class="nav-number">1.</span> <span class="nav-text">操作基础:基于hexo,github pages完成博客搭建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#持续集成的思想"><span class="nav-number">2.</span> <span class="nav-text">持续集成的思想</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第一步-到-appveyor-配置需要实现持续集成的项目"><span class="nav-number">3.</span> <span class="nav-text">第一步:到 appveyor 配置需要实现持续集成的项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二步-配置access-token"><span class="nav-number">4.</span> <span class="nav-text">第二步:配置access_token</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三步-设置appveyor-yml"><span class="nav-number">5.</span> <span class="nav-text">第三步:设置appveyor.yml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第四部：检验CI配置是否起作用"><span class="nav-number">6.</span> <span class="nav-text">第四部：检验CI配置是否起作用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#操作过程中遇到的其他问题"><span class="nav-number">7.</span> <span class="nav-text">操作过程中遇到的其他问题</span></a></li></ol></div>
             
 
           </div>
