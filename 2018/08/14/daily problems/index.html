@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1.触发器 2.存储过程 3. 4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义">
+<meta name="description" content="1.触发器 2.存储过程 3. 4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义 mysql安装(基于ubuntu) 1.查找tomcat所在目录 find / -name tomcat 2.修改mysql5.7初始化密码:sudo vim /etc/mysql/debian.cnf 下面介绍三种方式对MySQL进行启动/停止/重启操作： mysql操作:启动mys">
 <meta name="keywords" content="关键词">
 <meta property="og:type" content="article">
 <meta property="og:title" content="daily problems">
 <meta property="og:url" content="https://forecloud.github.io/2018/08/14/daily problems/index.html">
 <meta property="og:site_name" content="Forecloud">
-<meta property="og:description" content="1.触发器 2.存储过程 3. 4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义">
+<meta property="og:description" content="1.触发器 2.存储过程 3. 4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义 mysql安装(基于ubuntu) 1.查找tomcat所在目录 find / -name tomcat 2.修改mysql5.7初始化密码:sudo vim /etc/mysql/debian.cnf 下面介绍三种方式对MySQL进行启动/停止/重启操作： mysql操作:启动mys">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-14T10:33:59.127Z">
+<meta property="og:updated_time" content="2018-08-15T23:58:26.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="daily problems">
-<meta name="twitter:description" content="1.触发器 2.存储过程 3. 4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义">
+<meta name="twitter:description" content="1.触发器 2.存储过程 3. 4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义 mysql安装(基于ubuntu) 1.查找tomcat所在目录 find / -name tomcat 2.修改mysql5.7初始化密码:sudo vim /etc/mysql/debian.cnf 下面介绍三种方式对MySQL进行启动/停止/重启操作： mysql操作:启动mys">
 
 
 
@@ -401,6 +401,19 @@
 <p>2.存储过程</p>
 <p>3.</p>
 <p>4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义</p>
+<p>mysql安装(基于ubuntu)</p>
+<p>1.查找tomcat所在目录</p>
+<p>find / -name tomcat</p>
+<p>2.修改mysql5.7初始化密码:sudo vim /etc/mysql/debian.cnf</p>
+<p>下面介绍三种方式对MySQL进行启动/停止/重启操作：</p>
+<h4 id="mysql操作"><a href="#mysql操作" class="headerlink" title="mysql操作:"></a>mysql操作:</h4><p>启动mysql：<br>方式一：sudo /etc/init.d/mysql start<br>方式二：sudo start mysql<br>方式三：sudo service mysql start<br>停止mysql：<br>方式一：sudo /etc/init.d/mysql stop<br>方式二：sudo stop mysql<br>方式san：sudo service mysql stop<br>重启mysql：<br>方式一：sudo/etc/init.d/mysql restart<br>方式二：sudo restart mysql<br>方式三：sudo service mysql restart</p>
+<p>参考:</p>
+<p>​    <a href="https://blog.csdn.net/xiangwanpeng/article/details/54562362" target="_blank" rel="noopener">https://blog.csdn.net/xiangwanpeng/article/details/54562362</a></p>
+<p>​    <a href="https://www.cnblogs.com/anseey/archive/2013/04/28/3049785.html" target="_blank" rel="noopener">https://www.cnblogs.com/anseey/archive/2013/04/28/3049785.html</a></p>
+<p>​    <a href="https://www.jianshu.com/p/3111290b87f4" target="_blank" rel="noopener">https://www.jianshu.com/p/3111290b87f4</a></p>
+<p>​    改字符集: <a href="https://blog.csdn.net/qq_32144341/article/details/51318390" target="_blank" rel="noopener">https://blog.csdn.net/qq_32144341/article/details/51318390</a></p>
+<p>​    完全卸载: <a href="https://blog.csdn.net/w3045872817/article/details/77334886" target="_blank" rel="noopener">https://blog.csdn.net/w3045872817/article/details/77334886</a></p>
+<p>​    远程连接: <a href="https://www.cnblogs.com/ryanlamp/p/5555086.html" target="_blank" rel="noopener">https://www.cnblogs.com/ryanlamp/p/5555086.html</a></p>
 
       
     </div>
@@ -524,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -589,6 +611,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql操作"><span class="nav-number">1.</span> <span class="nav-text">mysql操作:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
