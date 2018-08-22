@@ -6,9 +6,10 @@ tags: [nginx入门]
 ---
 说明:
     基于centos6.10 minimal操作
-* 首先,到[nginx官网](https://nginx.org/)找到[download](https://nginx.org/en/download.html),接着找到Stable version,右击你所用平台的版本,复制[链接](https://nginx.org/download/nginx-1.14.0.tar.gz)
-* 回到centos依次执行以下命令:
+首先,到[nginx官网](https://nginx.org/)找到[download](https://nginx.org/en/download.html),接着找到Stable version,右击你所用平台的版本,复制[链接](https://nginx.org/download/nginx-1.14.0.tar.gz)
+回到centos依次执行以下命令:
  ### nginx安装
+ #### 方式一:源码安装
 ```
 # 安装下载工具与编译工具
 yum -y install wget
@@ -27,29 +28,36 @@ yum install zlib zlib-devel                 # 安装zlib二进制文件与头文
 make && make install
 ll /usr/local                               # 查看/usr/local目录是否有了nginx目录
 ```
- ### nginx 根目录介绍
+ #### 方式二:包安装
  ````
+ yum install nginx
+ ````
+ ### nginx 根目录介绍
+````
  conf   配置文件  
  html   网页文件
  logs   日志文件
  sbin   执行文件
 ````
  ### nginx 启动
- ````
+````
  cd /usr/local/nginx && ./sbin/nginx        # 启动
  ps -ef | grep nginx                        # 查看nginx进程
- ````
- * 启动异常:address already in use[端口被占用]
-```` 
+````
+#### 启动异常:address already in use[端口被占用]
+````
 netstat -antp                               #查看端口,PID,软件名
 kill -9 pid                                 #杀死进程
 pkill -9 pid                                #
-```` 
-
-通过ip:80访问nginx
-
-### nginx信号
-查看[官方文档](https://www.nginx.com/resources/wiki/start/topics/tutorials/commandline/)
 ````
 
+ ### 通过ip:80访问nginx
+ 可以正常访问说明启动成功
+
+ ### nginx信号
+查看[官方文档](https://www.nginx.com/resources/wiki/start/topics/tutorials/commandline/)
+
+ ### 其他补充
+````
+service iptables stop                       # centos防火墙临时关闭
 ````
