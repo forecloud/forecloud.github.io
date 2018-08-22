@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[nginx入门]]></title>
+    <url>%2F2018%2F08%2F22%2Fnginx%E5%85%A5%E9%97%A8%2F</url>
+    <content type="text"><![CDATA[--- title: nginx入门 date: 2018-8-22 14:55:26 categories: [nginx] tags: [nginx入门] --- 说明: 基于centos6.10 minimal操作 * 首先,到[nginx官网](https://nginx.org/)找到[download](https://nginx.org/en/download.html),接着找到Stable version,右击你所用平台的版本,复制[链接](https://nginx.org/download/nginx-1.14.0.tar.gz) * 回到centos依次执行以下命令: ### nginx安装 ``` # 安装下载工具与编译工具 yum -y install wget yum install gcc gcc-c++ ncurses-devel perl # 下载\解压 cd /usr/local/src && mkdir zip && cd zip wget https://nginx.org/download/nginx-1.14.0.tar.gz tar zxvf nginx-1.14.0.tar.gz -C .. cd ../nginx-1.14.0/ ./configure --prefix=/usr/local/nginx # 编译 # 出现error:the HTTP rewrite module requires the PCRE library.执行以下命令 yum install pcre pcre-devel # 安装pcre二进制文件与头文件 # 出现error: the HTTP gzip module requires the zlib library.执行以下命令 yum install zlib zlib-devel # 安装zlib二进制文件与头文件 # 终于一切顺利,执行以下语句,进行编译 make && make install ll /usr/local # 查看/usr/local目录是否有了nginx目录 ``` ### nginx 根目录介绍 ```` conf 配置文件 html 网页文件 logs 日志文件 sbin 执行文件 ```` ### nginx 启动 ```` cd /usr/local/nginx && ./sbin/nginx # 启动 ps -ef | grep nginx # 查看nginx进程 ```` * 启动异常:address already in use[端口被占用] ```` netstat -antp #查看端口,PID,软件名 kill -9 pid #杀死进程 pkill -9 pid # ```` 通过ip:80访问nginx ### nginx信号 查看[官方文档](https://www.nginx.com/resources/wiki/start/topics/tutorials/commandline/) ```` ````]]></content>
+      <categories>
+        <category>nginx</category>
+      </categories>
+      <tags>
+        <tag>nginx入门</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[daily problems]]></title>
     <url>%2F2018%2F08%2F14%2Fdaily%20problems%2F</url>
     <content type="text"><![CDATA[--- title: 'daily problems' date: 2018-08-14 14:41:23 categories: [日常问题] tags: [] --- 1.触发器 2.存储过程 3. 4.只要开始了,就不算晚;只要坚持了,就不会毫无意义;只有因逃避而放弃,毫无意义 mysql安装(基于ubuntu) 1.查找tomcat所在目录 find / -name tomcat 2.修改mysql5.7初始化密码:sudo vim /etc/mysql/debian.cnf 下面介绍三种方式对MySQL进行启动/停止/重启操作： #### mysql操作: 启动mysql： 方式一：sudo /etc/init.d/mysql start 方式二：sudo start mysql 方式三：sudo service mysql start 停止mysql： 方式一：sudo /etc/init.d/mysql stop 方式二：sudo stop mysql 方式san：sudo service mysql stop 重启mysql： 方式一：sudo/etc/init.d/mysql restart 方式二：sudo restart mysql 方式三：sudo service mysql restart 参考: ​ https://blog.csdn.net/xiangwanpeng/article/details/54562362 ​ https://www.cnblogs.com/anseey/archive/2013/04/28/3049785.html ​ https://www.jianshu.com/p/3111290b87f4 ​ 改字符集: https://blog.csdn.net/qq_32144341/article/details/51318390 ​ 完全卸载: https://blog.csdn.net/w3045872817/article/details/77334886 ​ 远程连接: https://www.cnblogs.com/ryanlamp/p/5555086.html]]></content>
