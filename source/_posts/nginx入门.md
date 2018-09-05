@@ -60,4 +60,11 @@ pkill -9 pid                                #
  ### 其他补充
 ````
 service iptables stop                       # centos防火墙临时关闭
+service iptables start                      # centos防火墙临时启动
+vi /etc/sysconfig/iptables                  # 编辑防火墙配置
 ````
+
+### location
+精准匹配:
+一般匹配:
+正则匹配:
